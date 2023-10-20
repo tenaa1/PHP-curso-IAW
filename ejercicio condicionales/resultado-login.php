@@ -19,14 +19,17 @@
     <!-- CONDICIONALES-->
     <h2>Condicional if - else</h2>
         <?php
-        $password = 'cone';
+        $rol = 'administrador';
         
         //sintaxis de comparacion <=, <, >, >=, ==
-        if($password == 'cone'){
-            echo '<h3 style="color:green">contraseña correcta <a href="resultado-login.php">Siguiente página</a></h3>';
+        if($rol == 'administrador'){
+            echo '<h3 style="color:green">administrador autorizado <a href="data.php">Siguiente página</a></h3>';
+        }
+        elseif($rol == 'usuario'){
+            echo '<h3 style="color:green">rango usuario <a href="data.php">Siguiente página</a></h3>';
         }
         else{
-            echo '<h3 style="color:red">contraseña incorrecta</h3>';
+            echo '<h3 style="color:red">no autorizado</h3>';
         }
         ?>
 
